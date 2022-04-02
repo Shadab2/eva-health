@@ -1,0 +1,37 @@
+.custom-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  margin-right: 20px;
+  width: 250px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: 50px;
+}
+.custom-button.non-inverted {
+  background-color: #ff6868;
+}
+.custom-button.non-inverted:hover {
+  background-color: white;
+  color: #ff6868;
+}
+
+.custom-button.inverted {
+  background-color: none;
+  border: 1px solid white;
+}
+.custom-button.inverted:hover {
+  background-color: #b4b8ff;
+  border: none;
+}
+
+@media screen and (max-width: 636px) {
+  .custom-button {
+    width: 100%;
+    margin: 8px 0px;
+  }
+}

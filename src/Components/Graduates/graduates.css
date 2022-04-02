@@ -1,0 +1,40 @@
+.graduates-container {
+  padding: 20px 100px;
+  width: 100%;
+}
+.graduate-title {
+  font-size: 20px;
+  color: #373b7b94;
+}
+
+.graduates {
+  display: grid;
+  margin-top: 30px;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid rgb(220, 217, 217);
+  transition: all 0.3s ease-in-out;
+}
+
+.img-wrapper:hover {
+  transform: scale(1.03);
+}
+.graduates-img {
+  width: 150px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 700px) {
+  .graduates-container {
+    padding: 0 30px;
+  }
+  .graduates {
+    grid-template-columns: 1fr;
+  }
+}

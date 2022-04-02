@@ -1,0 +1,92 @@
+.topbar {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  color: white;
+  padding: 0px 100px;
+  z-index: 99;
+}
+
+.topbar-left {
+  display: flex;
+  justify-content: space-between;
+  flex: 2;
+}
+.menu-items {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  width: 60%;
+  justify-content: space-around;
+}
+.menu-item {
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+}
+.menu-item:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #ff6868;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.menu-item:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.topbar-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.logo:hover {
+  transform: scale(1.1);
+}
+.topbar-button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  outline: none;
+  border: none;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.topbar-button:hover {
+  filter: invert();
+}
+
+@media screen and (max-width: 636px) {
+  .menu-items,
+  .menu-item .topbar-right,
+  .topbar-button {
+    display: none;
+    opacity: 0;
+  }
+  .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
