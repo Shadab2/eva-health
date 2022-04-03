@@ -32,7 +32,7 @@ function Graduates() {
       <div className="graduates">
         {data.map((item, id) => {
           return (
-            <div className="img-wrapper">
+            <div className="img-wrapper" key={id}>
               <img className="graduates-img" src={item.source} alt={item.alt} />
             </div>
           );

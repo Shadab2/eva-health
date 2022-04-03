@@ -1,0 +1,44 @@
+.half-width {
+  width: 45% !important;
+}
+.form-input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.ip {
+  height: 45px;
+  padding: 10px;
+  font-size: 12px;
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+.ip:focus {
+  outline: none;
+}
+
+.ip[type="button"] {
+  background: transparent;
+  border: 1px solid rgb(202, 198, 198);
+  cursor: pointer;
+}
+
+.ip[type="submit"] {
+  background: #001d84;
+  cursor: pointer;
+  color: white;
+  border: none;
+}
+.ip[type="button"]:hover {
+  background-color: whitesmoke;
+}
+.ip[type="submit"]:hover {
+  background-color: #031450;
+}
+
+input:invalid[focus="true"] ~ span {
+  display: block !important;
+}

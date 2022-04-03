@@ -9,6 +9,7 @@
   padding: 0px 5%;
   margin-bottom: 20px;
   background-color: #373b7b;
+  overflow: hidden;
   height: 100vh;
 }
 
@@ -23,7 +24,6 @@
   width: 37%;
   background-color: #b4b8ff;
   position: relative;
-  overflow: visible;
 }
 
 .home-title {
@@ -39,7 +39,7 @@
   position: absolute;
   height: 100%;
   object-fit: contain;
-  bottom: -50px;
+  bottom: -80px;
   left: -34px;
   /* left: -34px;
   bottom: -49px; */
