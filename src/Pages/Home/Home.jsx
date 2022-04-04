@@ -4,9 +4,11 @@ import Graduates from "../../Components/Graduates/Graduates";
 import "./home.css";
 import CustomButton from "../../Components/CustomButton/CustomButton";
 import Form from "../../Components/Form/Form";
+import useMediaQuery from "../../useMediaQuery";
 
 function Home() {
   const [open, setIsOpen] = useState(false);
+  const isDesktop = useMediaQuery("(min-width:636px)");
   const handleModal = () => {
     setIsOpen((prev) => !prev);
   };
@@ -31,7 +33,7 @@ function Home() {
           />
         </div>
       </div>
-      <Graduates />
+      {((open && isDesktop) || !open) && <Graduates />}
       <Form handleModal={handleModal} open={open} />
     </div>
   );

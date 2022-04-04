@@ -11,6 +11,10 @@
   opacity: 0;
   transition: all 0.6s ease-in-out;
 }
+
+.mobile-height {
+  height: 100%;
+}
 .form-container.true {
   transform: translateX(0vw);
   opacity: 1;
@@ -91,4 +95,33 @@
   color: red;
   position: absolute;
   bottom: -20px;
+}
+
+.mobile-error {
+  display: none;
+  font-size: 12px;
+  font-weight: 500;
+  color: red;
+  position: absolute;
+  bottom: -10px;
+  left: 0px;
+}
+
+@media screen and (max-width: 636px) {
+  .form-container {
+    padding: 0;
+  }
+  .form-wrapper {
+    min-width: 80%;
+    width: 320px;
+    padding: 20px;
+  }
+  .form-title {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+  .input-wrapper {
+    display: block;
+  }
 }

@@ -6,6 +6,7 @@
   flex-direction: column;
   width: 100%;
   margin-bottom: 10px;
+  position: relative;
 }
 
 .ip {
@@ -41,4 +42,13 @@
 
 input:invalid[focus="true"] ~ span {
   display: block !important;
+}
+
+@media screen and (max-width: 636px) {
+  .half-width {
+    width: 100% !important;
+  }
+  .form-input {
+    margin-bottom: 18px;
+  }
 }

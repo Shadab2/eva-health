@@ -1,6 +1,7 @@
 .graduates-container {
   padding: 20px 100px;
   width: 100%;
+  z-index: -1;
 }
 .graduate-title {
   font-size: 20px;

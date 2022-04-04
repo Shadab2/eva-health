@@ -15,7 +15,14 @@ function FormInput({ label, error, half, name, ...inputProps }) {
         onBlur={() => setFocus((prev) => !prev)}
         focus={focus.toString()}
       />
-      <span style={{ display: "none", color: "red", fontSize: "12px" }}>
+      <span
+        style={{
+          display: "none",
+          color: "red",
+          fontSize: "12px",
+          fontWeight: "500",
+        }}
+      >
         {error}
       </span>
     </div>
