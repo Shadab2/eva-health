@@ -72,18 +72,20 @@ function Form({ handleModal, open }) {
       toast.error("Validation Failed ");
       return;
     }
-    const data = {
-      ...state,
-      education:
-        ed1.current.value +
-        " , " +
-        ed2.current.value +
-        `${ed3.current ? ed3.current.value : ""}` +
-        " , " +
-        `${ed4.current ? ed4.current.value : ""}`,
-    };
+    if (isDesktop) {
+      const data = {
+        ...state,
+        education:
+          ed1.current.value +
+          " , " +
+          ed2.current.value +
+          `${ed3.current ? ed3.current.value : ""}` +
+          " , " +
+          `${ed4.current ? ed4.current.value : ""}`,
+      };
+      console.log(JSON.stringify(data));
+    } else console.log(JSON.stringify(state));
     toast.success("Succesfully Submitted");
-    console.log(data);
     setTimeout(() => {
       handleModal();
       setState(InitialState);
@@ -111,19 +113,21 @@ function Form({ handleModal, open }) {
 
   const removeBlock = () => {
     if (blocks === 2) return;
-    if (blocks == 4) ed4.current.value = "";
-    if (blocks == 3) ed3.current.value = "";
+    if (blocks === 4) ed4.current.value = "";
+    if (blocks === 3) ed3.current.value = "";
     setblocks((block) => block - 1);
   };
 
   const handlePageChange = (e) => {
     e.preventDefault();
-    var reg = /^-?\d+\.?\d*$/;
+    var regE = /^-?\d+\.?\d*$/;
+    var regM = /^[0]?[789]\d{9}$/;
     if (
       state.fullname === "" ||
       state.mobile === "" ||
       state.email === "" ||
-      !reg.test(state.experience)
+      !regE.test(state.experience) ||
+      !regM.test(state.mobile)
     ) {
       toast.error("Kindly Provide Valid Input");
       return;
